@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
 
 //use宣言は外部にあるクラスをPostController内にインポートできる
@@ -26,7 +27,7 @@ class PostController extends Controller//インポートしたPostをインス�
         return view('posts/create');
     }
     
-    public function store(Request $request, Post $post)
+    public function store(PostRequest $request, Post $post)
     {
         $input = $request['post'];
         $post->fill($input)->save();
