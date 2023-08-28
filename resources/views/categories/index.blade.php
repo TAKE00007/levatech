@@ -20,7 +20,7 @@
                     <h2 class='title'>
                         <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
-                    <a href="/category1s/{{ $post->category1->id }}">{{ $post->category1->name }}</a>
+                    <a href=" ">{{ $post->category1->name }}</a>
                     <p class='body'>{{ $post->body }}</p>
                     <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                         @csrf
